@@ -31,3 +31,569 @@ ZeroDivisionError: division by zero
 2024-03-14 00:06:42,306 [INFO] wrapper - 方法 "example_func1" 执行成功
 2024-03-14 00:06:42,307 [INFO] log_parameters - Function "example_func1" 入参: {'a': 1, 'b': 6}
 2024-03-14 00:06:42,308 [INFO] log_return - Function "example_func1" 出参: 0.16666666666666666
+2024-03-14 15:10:25,673 [INFO] wrapper - 方法 "example_func1" 执行成功
+2024-03-14 15:10:25,673 [INFO] log_parameters - Function "example_func1" 入参: {'a': 1, 'b': 6}
+2024-03-14 15:10:25,673 [INFO] log_return - Function "example_func1" 出参: 0.16666666666666666
+2024-03-14 15:11:22,492 [INFO] wrapper - 方法 "example_func1" 执行成功
+2024-03-14 15:11:22,492 [INFO] log_parameters - Function "example_func1" 入参: {'a': 1, 'b': 6}
+2024-03-14 15:11:22,492 [INFO] log_return - Function "example_func1" 出参: 0.16666666666666666
+2024-03-14 15:15:58,157 [INFO] wrapper - 方法 "example_func1" 执行成功
+2024-03-14 15:15:58,157 [INFO] wrapper - 方法 "example_func1" 执行成功
+2024-03-14 15:15:58,157 [INFO] log_parameters - Function "example_func1" 入参: {'a': 1, 'b': 6}
+2024-03-14 15:15:58,157 [INFO] log_parameters - Function "example_func1" 入参: {'a': 1, 'b': 6}
+2024-03-14 15:15:58,157 [INFO] log_return - Function "example_func1" 出参: 0.16666666666666666
+2024-03-14 15:15:58,157 [INFO] log_return - Function "example_func1" 出参: 0.16666666666666666
+2024-03-14 15:18:49,642 [INFO] wrapper - 方法 "example_func1" 执行成功
+2024-03-14 15:18:49,642 [INFO] log_parameters - Function "example_func1" 入参: {'a': 1, 'b': 6}
+2024-03-14 15:18:49,642 [INFO] log_return - Function "example_func1" 出参: 0.16666666666666666
+2024-03-14 15:40:29,290 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:40:29,290 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:40:29,291 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000011E3ECAFEB0>, 'image1_path': '2.jpg', 'image2_path': '3.jpg'}
+2024-03-14 15:40:29,291 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000011E3ECAFEB0>, 'image1_path': '2.jpg', 'image2_path': '3.jpg'}
+2024-03-14 15:40:29,297 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:40:29,297 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:43:06,148 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:43:06,148 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:43:06,150 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001C33A65FEB0>, 'image1_path': '2.jpg', 'image2_path': '3.jpg'}
+2024-03-14 15:43:06,150 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001C33A65FEB0>, 'image1_path': '2.jpg', 'image2_path': '3.jpg'}
+2024-03-14 15:43:06,152 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:43:06,152 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:43:56,215 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:43:56,215 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:43:56,216 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001DD5EDEBEB0>, 'image1_path': '2.jpg', 'image2_path': '3.jpg'}
+2024-03-14 15:43:56,216 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001DD5EDEBEB0>, 'image1_path': '2.jpg', 'image2_path': '3.jpg'}
+2024-03-14 15:43:56,218 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:43:56,218 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:46:18,755 [ERROR] wrapper - resize_image - 51 - AttributeError: 'NoneType' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\log\log_decorator.py", line 51, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\compare_servers\preprocessing.py", line 33, in resize_image
+    height1, width1 = image1.shape[:2]
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+2024-03-14 15:46:18,755 [ERROR] wrapper - resize_image - 51 - AttributeError: 'NoneType' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\log\log_decorator.py", line 51, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\compare_servers\preprocessing.py", line 33, in resize_image
+    height1, width1 = image1.shape[:2]
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+2024-03-14 15:46:45,660 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:46:45,660 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:46:45,661 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000010B395EBEB0>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 15:46:45,661 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000010B395EBEB0>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 15:46:45,662 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:46:45,662 [INFO] log_return - Function "resize_image" 出参: None
+2024-03-14 15:51:03,946 [ERROR] wrapper - resize_image - 51 - TypeError: ImagePreprocessor._trim_edges() takes 2 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\log\log_decorator.py", line 51, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\compare_servers\preprocessing.py", line 49, in resize_image
+    image2 = self._trim_edges(image2, height_diff, width_diff)
+TypeError: ImagePreprocessor._trim_edges() takes 2 positional arguments but 4 were given
+
+2024-03-14 15:51:03,946 [ERROR] wrapper - resize_image - 51 - TypeError: ImagePreprocessor._trim_edges() takes 2 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\log\log_decorator.py", line 51, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\workspace\find_the_same_shoes\find_the_same_shoes\compare_servers\preprocessing.py", line 49, in resize_image
+    image2 = self._trim_edges(image2, height_diff, width_diff)
+TypeError: ImagePreprocessor._trim_edges() takes 2 positional arguments but 4 were given
+
+2024-03-14 15:51:36,470 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:51:36,470 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:51:36,471 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001E6C117BEB0>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 15:51:36,471 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001E6C117BEB0>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 15:51:36,472 [INFO] log_return - Function "resize_image" 出参: (array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8), array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8))
+2024-03-14 15:51:36,472 [INFO] log_return - Function "resize_image" 出参: (array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8), array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8))
+2024-03-14 15:53:38,581 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:53:38,582 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000014A36CBFE80>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 15:53:38,582 [INFO] log_return - Function "resize_image" 出参: (array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8), array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8))
+2024-03-14 15:57:53,164 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 15:57:53,164 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x000001688975FE80>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 15:57:53,165 [INFO] log_return - Function "resize_image" 出参: (array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8), array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8))
+2024-03-14 16:01:27,886 [INFO] wrapper - 方法 "resize_image" 执行成功
+2024-03-14 16:01:27,886 [INFO] log_parameters - Function "resize_image" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000014ADBCFCA60>, 'image1_path': '2.png', 'image2_path': '1.jpg'}
+2024-03-14 16:01:27,887 [INFO] log_return - Function "resize_image" 出参: (array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8), array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]],
+
+       [[247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244],
+        ...,
+        [247, 245, 244],
+        [247, 245, 244],
+        [247, 245, 244]]], dtype=uint8))

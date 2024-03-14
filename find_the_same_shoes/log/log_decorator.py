@@ -77,3 +77,7 @@ def log_parameters(logger, func, *args, **kwargs):
 
 def log_return(logger, func, result):
     logger.info('Function "%s" 出参: %s', func.__name__, result)
+
+
+
+logger = setup_logger()

@@ -11,6 +11,7 @@ class ShoeFeatureExtractor:
         # 添加全局平均池化层以获得特征向量
         self.model = Model(inputs=self.base_model.input, outputs=self.base_model.output)
 
+
     def preprocess_image(self, img_array):
         """
         预处理图像，使其符合ResNet50的要求。
@@ -20,6 +21,7 @@ class ShoeFeatureExtractor:
         # 使用ResNet50的预处理函数
         img_array_preprocessed = preprocess_input(img_array_resized)
         return img_array_preprocessed
+
 
     def extract_features(self, img_array):
         """
