@@ -14,7 +14,7 @@ def test_log():
 
 def test1():
     preprecer = preprocessing.ImagePreprocessor()
-    preprecer.resize_image('2.png', '1.jpg')
+    preprecer.resize_image('2.jpg', '1.jpg')
 
 if __name__ == '__main__':
     test1()

@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from find_the_same_shoes.log.log_decorator import logger, log_exceptions_and_info
-
+from find_the_same_shoes.models import Image
 
 
 class ImagePreprocessor:
@@ -22,15 +22,16 @@ class ImagePreprocessor:
             image2_path (str): 第二张图片
 
         Returns:
-            _type_: _description_
+            Image: _description_
         """        
         # 转化为cv2对象
-        image1 = cv2.imread(image1_path)
-        image2 = cv2.imread(image2_path)
+        image1 = Image(image1_path)
+        image2 = Image(image2_path)
+        print(image2.content.shape)
 
         # 获取两张图片的尺寸
-        height1, width1 = image1.shape[:2]
-        height2, width2 = image2.shape[:2]
+        height1, width1 = image1.shape
+        height2, width2 = image2.shape
         """ print("start", height1, width1)
         print("start", height2, width2) """
 
@@ -44,29 +45,34 @@ class ImagePreprocessor:
             # 选取较大图片进行缩放
             if height1*width1 > height2*width2:
                 image1 = self._trim_edges(image1)
+            elif height1*width1 < height2*width2:
+                image2 = self._trim_edges(image2)
             else:
                 image2 = self._trim_edges(image2)
+                print(image2.content.shape)
+                pass
 
-            height1, width1 = image1.shape[:2]
-            height2, width2 = image2.shape[:2]
+            height1, width1 = image1.shape
+            height2, width2 = image2.shape
             """ print(height1, width1)
-            print(height2, width2)    """         
+            print(height2, width2)    """    
+           
         else:
             return False
 
         return image1, image2
     
 
-    def _trim_edges(self, image):
+    def _trim_edges(self, image: Image):
         """将图片最外围一圈截除，使其面积为原来的90%
 
         Args:
-            image (array): 图片对象，Numpy数组
+            image (Image): 图片对象，Numpy数组
 
         Returns:
             array: 调整后的图片
         """        
-        height, width = image.shape[:2]
+        height, width = image.shape
         original_area = height * width
         new_area = original_area * 0.9
 
@@ -77,9 +83,13 @@ class ImagePreprocessor:
         height_diff = int((height - height / ratio) / 4)
         width_diff = int((width - width / ratio) / 4)
 
+        content = image.content
+        #print(content.shape)
+        new_content = content[height_diff:height-height_diff, width_diff:width-width_diff]
+        #print(new_content.shape)
         # 截取图片
-        trimmed_image = image[height_diff:height-height_diff, width_diff:width-width_diff]
-        return trimmed_image
+        image.content = new_content
+        return image
 
 
     @log_exceptions_and_info(logger) 
