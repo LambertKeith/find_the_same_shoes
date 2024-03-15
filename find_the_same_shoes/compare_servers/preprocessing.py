@@ -27,7 +27,7 @@ class ImagePreprocessor:
         # 转化为cv2对象
         image1 = Image(image1_path)
         image2 = Image(image2_path)
-        print(image2.content.shape)
+        # print(image2.content.shape)
 
         # 获取两张图片的尺寸
         height1, width1 = image1.shape
@@ -38,7 +38,7 @@ class ImagePreprocessor:
         # 计算尺寸差距百分比
         height_diff = abs(height1 - height2) / max(height1, height2)
         width_diff = abs(width1 - width2) / max(width1, width2)
-        #print(height_diff, width_diff)
+        # print(height_diff, width_diff)
 
         # 判断尺寸差距是否在10%以内
         if height_diff * width_diff <= 0.1:
@@ -48,8 +48,8 @@ class ImagePreprocessor:
             elif height1*width1 < height2*width2:
                 image2 = self._trim_edges(image2)
             else:
-                image2 = self._trim_edges(image2)
-                print(image2.content.shape)
+                # image2 = self._trim_edges(image2)
+                # print(image2.content.shape)
                 pass
 
             height1, width1 = image1.shape
@@ -101,9 +101,11 @@ class ImagePreprocessor:
         # 这里仅提供一个示例框架，具体实现应调用外部API
         # 假设结果是一个将背景替换为白色的图片
         # 这部分代码需要根据实际API进行修改
-        # TODO
         
         placeholder_image = np.full_like(image, 255) # 创建一个全白的图片
+        # TODO
+
+        
         return placeholder_image
 
 # 示例用法
