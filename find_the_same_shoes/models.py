@@ -56,8 +56,4 @@ class Image:
         return self.content.shape[0], self.content.shape[1] if self.content is not None else None
 
 
-
-
-
-
-        
+       
