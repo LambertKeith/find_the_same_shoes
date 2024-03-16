@@ -1,0 +1,4 @@
+find_the_same_shoes:
+    rmbg_server_add: http://192.168.10.154:8000/rmbg/
+    pic_input_folder: pic/input
+    pic_without_bg_folder: pic/without_bg

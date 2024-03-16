@@ -2,6 +2,11 @@ import cv2
 import numpy as np
 from find_the_same_shoes.log.log_decorator import logger, log_exceptions_and_info
 from find_the_same_shoes.models import Image
+import requests
+from PIL import Image
+from io import BytesIO
+from find_the_same_shoes.config.get_config import read_yaml_file
+config_info = read_yaml_file()
 
 
 class ImagePreprocessor:
@@ -16,6 +21,8 @@ class ImagePreprocessor:
         """归一化尺寸
         - 如果尺寸差距在10%以内，则将较大的图片边缘切去10%。
         - 如果差距超过10%，则不做处理。
+
+        暂时用不到了
 
         Args:
             image1_path (str): 第一张图片
@@ -93,26 +100,23 @@ class ImagePreprocessor:
 
 
     @log_exceptions_and_info(logger) 
-    def remove_background(self, image):
+    def remove_background(self, file_path):
         """
-        背景移除 - 模拟方法
-        在实际应用中，这个方法应该被替换为调用外部API来实现背景移除。
+        背景移除
+        调用外部API来实现背景移除。
         """
-        # 这里仅提供一个示例框架，具体实现应调用外部API
-        # 假设结果是一个将背景替换为白色的图片
-        # 这部分代码需要根据实际API进行修改
-        
-        placeholder_image = np.full_like(image, 255) # 创建一个全白的图片
-        # TODO
 
-        
-        return placeholder_image
+        # 上传图像文件
+        with open(file_path, "rb") as file:
+            files = {"file": (file_path, file, "image/jpeg")}
+            response = requests.post(config_info["rmbg_server_add"], files=files)
 
-# 示例用法
-# 加载图片（替换为实际路径）
-# image1 = cv2.imread('path_to_image1.jpg')
-# image2 = cv2.imread('path_to_image2.jpg')
-
-# preprocessor = ImagePreprocessor()
-# resized_image1, resized_image2 = preprocessor.resize_image(image1, image2)
-# background_removed_image = preprocessor.remove_background(resized_image1)
+        # 检查响应是否成功
+        if response.status_code == 200:
+            # 从响应中获取图像数据并保存为图片文件
+            image_bytes = BytesIO(response.content)
+            image = Image.open(image_bytes)
+            image.save("result_image.png")
+            print("图像保存成功！")
+        else:
+            print("请求失败:", response.text)
