@@ -16,5 +16,15 @@ def test1():
     preprecer = preprocessing.ImagePreprocessor()
     preprecer.resize_image('2.jpg', '1.jpg')
 
+
+def test2():
+    preprecer = preprocessing.ImagePreprocessor()
+    if preprecer.remove_background(r"D:\workspace\RMBG-1.4\source\1.jpg"):
+        print("yes")
+    else:
+        print("no")
+    pass
+
+
 if __name__ == '__main__':
-    test1()
+    test2()

@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-class Image:
+class MyImage:
     def __init__(self, path):
         self.path = path
         self.format = self.get_format()

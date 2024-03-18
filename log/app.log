@@ -1,0 +1,7 @@
+2024-03-18 14:33:55,179 [DEBUG] _new_conn - Starting new HTTP connection (1): 192.168.10.154:8000
+2024-03-18 14:34:02,301 [DEBUG] _make_request - http://192.168.10.154:8000 "POST /rmbg/ HTTP/1.1" 200 1300364
+2024-03-18 14:34:02,389 [DEBUG] call - STREAM b'IHDR' 16 13
+2024-03-18 14:34:02,390 [DEBUG] call - STREAM b'IDAT' 41 65536
+2024-03-18 14:34:03,454 [INFO] wrapper - 方法 "remove_background" 执行成功
+2024-03-18 14:34:03,456 [INFO] log_parameters - Function "remove_background" 入参: {'self': <find_the_same_shoes.compare_servers.preprocessing.ImagePreprocessor object at 0x0000019E215AE110>, 'file_path': 'D:\\workspace\\RMBG-1.4\\source\\1.jpg'}
+2024-03-18 14:34:03,456 [INFO] log_return - Function "remove_background" 出参: True

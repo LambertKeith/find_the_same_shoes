@@ -1,7 +1,8 @@
+import os
 import cv2
 import numpy as np
 from find_the_same_shoes.log.log_decorator import logger, log_exceptions_and_info
-from find_the_same_shoes.models import Image
+from find_the_same_shoes.models import MyImage
 import requests
 from PIL import Image
 from io import BytesIO
@@ -32,8 +33,8 @@ class ImagePreprocessor:
             Image: _description_
         """        
         # 转化为cv2对象
-        image1 = Image(image1_path)
-        image2 = Image(image2_path)
+        image1 = MyImage(image1_path)
+        image2 = MyImage(image2_path)
         # print(image2.content.shape)
 
         # 获取两张图片的尺寸
@@ -116,7 +117,10 @@ class ImagePreprocessor:
             # 从响应中获取图像数据并保存为图片文件
             image_bytes = BytesIO(response.content)
             image = Image.open(image_bytes)
-            image.save("result_image.png")
-            print("图像保存成功！")
+            # 路径配置文件化
+            # TODO
+            image.save(f"{config_info['pic_without_bg_folder']}/{os.path.basename(file_path)}.png")
+            return True
         else:
             print("请求失败:", response.text)
+            return False
